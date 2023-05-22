@@ -4,7 +4,8 @@
   "description": "Pull to refresh",
   "main": "dist/pullToRefresh.js",
   "scripts": {
-    "build": "node build && gulp"
+    "build": "node build && gulp",
+    "preinstall": "npx npm-force-resolutions"
   },
   "repository": {
     "type": "git",
@@ -49,5 +50,11 @@
       "browser": true,
       "node": true
     }
+  },
+  "overrides": {
+    "graceful-fs": "^4.2.11"
+  },
+  "resolutions": {
+    "graceful-fs": "^4.2.11"
   }
 }
